@@ -297,7 +297,7 @@ check_status() {
         return 2
     fi
     temp=$(rc-service x-ui status)
-    if [[ x"${temp}" == x"* status: started" ]]; then
+    if [[ x"${temp}" == x" * status: started" ]]; then
         return 0
     else
         return 1
@@ -306,7 +306,7 @@ check_status() {
 
 check_enabled() {
     temp=$(rc-service x-ui status)
-    if [[ x"${temp}" == x"* status: started" ]]; then
+    if [[ x"${temp}" == x" * status: started" ]]; then
         return 0
     else
         return 1
