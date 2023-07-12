@@ -44,9 +44,9 @@ mkdir /lib64
 cp /lib/ld-musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
 
 echo "安装Alpine所需文件"
-curl -Ls https://raw.githubusercontent.com/Lynn-Becky/alpine-xui/main/Dependency/x-ui.db -o x-ui.db
-curl -Ls https://raw.githubusercontent.com/Lynn-Becky/alpine-xui/main/Dependency/config.json -o config.json
-curl -Ls https://raw.githubusercontent.com/Lynn-Becky/alpine-xui/main/Dependency/x-ui -o x-ui
+curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/Dependency/x-ui.db -o x-ui.db
+curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/Dependency/config.json -o config.json
+curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/Dependency/x-ui -o x-ui
 mv x-ui.db /etc/x-ui/
 mv x-ui /etc/init.d/
 mv config.json  /usr/local/x-ui/bin/
