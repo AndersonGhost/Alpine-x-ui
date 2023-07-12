@@ -7,12 +7,24 @@ plain='\033[0m'
 
 cur_dir=$(pwd)
 
+# check root
+[[ $EUID -ne 0 ]] && echo -e "${red}错误：${plain} 必须使用root用户运行此脚本！\n" && exit 1
+
+# check os
+if cat /etc/issue | grep -Eqi "alpine"; then
+    release="alpine"
+else
+    echo -e "${red}未检测到系统版本，请联系脚本作者！${plain}\n" && exit 1
+fi
+
 arch=$(arch)
 
 if [[ $arch == "x86_64" || $arch == "x64" || $arch == "amd64" ]]; then
     arch="amd64"
 elif [[ $arch == "aarch64" || $arch == "arm64" ]]; then
     arch="arm64"
+elif [[ $arch == "s390x" ]]; then
+    arch="s390x"
 else
     arch="amd64"
     echo -e "${red}检测架构失败，使用默认架构: ${arch}${plain}"
@@ -24,6 +36,23 @@ if [ $(getconf WORD_BIT) != '32' ] && [ $(getconf LONG_BIT) != '64' ]; then
     echo "本软件不支持 32 位系统(x86)，请使用 64 位系统(x86_64)，如果检测有误，请联系作者"
     exit -1
 fi
+
+os_version=""
+
+# os version
+if [[ -f /etc/os-release ]]; then
+    os_version=$(awk -F'[= ."]' '/VERSION_ID/{print $3}' /etc/os-release)
+fi
+if [[ -z "$os_version" && -f /etc/lsb-release ]]; then
+    os_version=$(awk -F'[= ."]+' '/DISTRIB_RELEASE/{print $2}' /etc/lsb-release)
+fi
+
+if [[ x"${release}" == x"alpine" ]]; then
+    if [[ ${os_version} -le 3 ]]; then
+        echo -e "${red}请使用 Alpine 3 或更高版本的系统！${plain}\n" && exit 1
+    fi
+fi
+
 
 #This function will be called when user installed x-ui out of sercurity
 config_after_install() {
