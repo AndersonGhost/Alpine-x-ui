@@ -280,7 +280,7 @@ install_bbr() {
 }
 
 update_shell() {
-    wget -O /usr/bin/x-ui -N --no-check-certificate https://github.com/Lynn-Becky/x-ui/raw/master/x-ui.sh
+    wget -O /usr/bin/x-ui -N --no-check-certificate https://github.com/Lynn-Becky/Alpine-x-ui/raw/master/x-ui.sh
     if [[ $? != 0 ]]; then
         echo ""
         LOGE "下载脚本失败，请检查本机能否连接 Github"
@@ -297,7 +297,7 @@ check_status() {
         return 2
     fi
     temp=$( rc-service x-ui status  | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-    if [[ x"${temp}" == x"" ]]; then
+    if [[ x"${temp}" == x"* status: started" ]]; then
         return 0
     else
         return 1
@@ -523,3 +523,4 @@ if [[ $# > 0 ]]; then
 else
     show_menu
 fi
+  
