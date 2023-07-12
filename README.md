@@ -23,3 +23,8 @@ x86-64版本使用了FranzKafkaYu编译的新x-ui，支持新协议，arm64版�
 apk add curl&&apk add bash && bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/alpine-xui.sh)
 ```
 仅支持Alpine linux 安装
+# 部分问题解决方案
+若跑太猛，面板crashed了，请使用以下命令重启面板
+```
+/etc/init.d/x-ui restart
+```
