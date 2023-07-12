@@ -58,9 +58,6 @@ install_base() {
         apk add curl && apk add bash && apk add sudo && apk add wget
         mkdir /lib64
         cp /lib/ld-musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
-        curl -Ls https://github.com/Lynn-Becky/Alpine-x-ui/raw/main/x-ui -o x-ui
-        mv x-ui /etc/init.d/
-        chmod +x /etc/init.d/x-ui
     else
         apt install wget curl tar -y
     fi
@@ -117,9 +114,16 @@ install_x-ui() {
     rm x-ui-linux-${arch}.tar.gz -f
     cd x-ui
     chmod +x x-ui bin/xray-linux-${arch}
-    wget --no-check-certificate -O /usr/bin/x-ui https://raw.githubusercontent.com/Lynn-Becky/x-ui/main/x-ui.sh
+    wget --no-check-certificate -O /usr/bin/x-ui https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/x-ui.sh
     chmod +x /usr/local/x-ui/x-ui.sh
     chmod +x /usr/bin/x-ui
+    curl -Ls https://github.com/Lynn-Becky/Alpine-x-ui/raw/main/x-ui -o x-ui
+    mv x-ui /etc/init.d/
+    chown 501.dialout /etc/x-ui/x-ui.db
+    chown 501.dialout /usr/local/x-ui/bin/config.json
+    chmod +x /etc/init.d/x-ui
+    chmod 0644 /etc/x-ui/x-ui.db
+    chmod 0644 /usr/local/x-ui/bin/config.json
     config_after_install
     #echo -e "如果是全新安装，默认网页端口为 ${green}54321${plain}，用户名和密码默认都是 ${green}admin${plain}"
     #echo -e "请自行确保此端口没有被其他程序占用，${yellow}并且确保 54321 端口已放行${plain}"
