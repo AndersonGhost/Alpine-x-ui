@@ -3,6 +3,8 @@
 支持多协议多用户的 xray 面板
 对Alpine linux做了尝试性适配
 目前仅对安装脚本进行修改
+# 已知问题
+在dd为Alpine的Gullo nat机上，无法使用ipv4端口
 # 功能介绍
 
 - 系统状态监控
