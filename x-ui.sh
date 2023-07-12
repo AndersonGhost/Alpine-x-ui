@@ -412,12 +412,12 @@ show_menu() {
   ${green}1.${plain} 安装 x-ui
   ${green}2.${plain} 更新 x-ui
   ${green}3.${plain} 卸载 x-ui
-————————————————可用，无视面板重启失败错误
+————————————————可用
   ${green}4.${plain} 重置用户名密码
   ${green}5.${plain} 重置面板设置
   ${green}6.${plain} 设置面板端口
   ${green}7.${plain} 查看当前面板设置
-————————————————查看x-ui可用
+————————————————基本可用
   ${green}8.${plain} 启动 x-ui
   ${green}9.${plain} 停止 x-ui
   ${green}10.${plain} 重启 x-ui
