@@ -2,7 +2,6 @@
 
 支持多协议多用户的 xray 面板
 对Alpine linux做了尝试性适配
-![捕获](https://github.com/Lynn-Becky/Alpine-x-ui/assets/60915579/91bee281-c28d-46f0-8eca-8c6bab15a676)
 ![捕获2](https://github.com/Lynn-Becky/Alpine-x-ui/assets/60915579/b823282b-d88d-4588-a2b4-89148bee0856)
 
 # 已知问题
