@@ -22,6 +22,6 @@
 
 ```
 apk add curl&&apk add bash
-bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/x-ui/main/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/alpine-xui/main/alpine-xui.sh)
 ```
 仅支持Alpine 3.18+ 安装
