@@ -297,7 +297,7 @@ check_status() {
         return 2
     fi
     temp=$( rc-service x-ui status  | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-    if [[ x"${temp}" == x"* status: started" ]]; then
+    if [[ x"${temp}" == x"" ]]; then
         return 0
     else
         return 1
@@ -408,7 +408,7 @@ show_menu() {
     echo -e "
   ${green}x-ui 面板管理脚本${plain}
   ${green}0.${plain} 退出脚本
-————————————————未测试，不要用户
+————————————————未测试，不要用
   ${green}1.${plain} 安装 x-ui
   ${green}2.${plain} 更新 x-ui
   ${green}3.${plain} 卸载 x-ui
