@@ -19,6 +19,7 @@
 # 安装&升级
 
 ```
+apk add curl
 bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/x-ui/main/install.sh)
 ```
 仅支持Alpine 3.18+ 安装
