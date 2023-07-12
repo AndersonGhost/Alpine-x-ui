@@ -56,11 +56,6 @@ fi
 install_base() {
     if [[ x"${release}" == x"alpine" ]]; then
         apk add curl && apk add bash && apk add sudo && apk add wget
-        mkdir /lib64
-        cp /lib/ld-musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
-        curl -Ls https://github.com/Lynn-Becky/Alpine-x-ui/raw/main/x-ui -o x-ui
-        mv x-ui /etc/init.d/
-        chmod +x /etc/init.d/x-ui
     else
         apt install wget curl tar -y
     fi
