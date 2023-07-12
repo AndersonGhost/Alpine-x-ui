@@ -408,22 +408,22 @@ show_menu() {
     echo -e "
   ${green}x-ui 面板管理脚本${plain}
   ${green}0.${plain} 退出脚本
-————————————————
+————————————————未测试，不建议用
   ${green}1.${plain} 安装 x-ui
   ${green}2.${plain} 更新 x-ui
   ${green}3.${plain} 卸载 x-ui
-————————————————
+————————————————可用，无视面板重启失败错误
   ${green}4.${plain} 重置用户名密码
   ${green}5.${plain} 重置面板设置
   ${green}6.${plain} 设置面板端口
   ${green}7.${plain} 查看当前面板设置
-————————————————
+————————————————查看x-ui可用
   ${green}8.${plain} 启动 x-ui
   ${green}9.${plain} 停止 x-ui
   ${green}10.${plain} 重启 x-ui
   ${green}11.${plain} 查看 x-ui 状态
   ${green}12.${plain} 查看 x-ui 日志
-————————————————
+————————————————不可用
   ${green}13.${plain} 设置 x-ui 开机自启
   ${green}14.${plain} 取消 x-ui 开机自启
 ————————————————
