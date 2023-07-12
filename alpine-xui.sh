@@ -59,7 +59,7 @@ rc-update add /etc/init.d/x-ui
 /etc/init.d/x-ui start
 
 # install x-ui
-bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/x-ui/main/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/install.sh)
 
 echo -e "${plain}x-ui安装完成"
 echo -e "${green}正在启动x-ui...."
