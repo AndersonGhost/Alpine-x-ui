@@ -122,7 +122,6 @@ install_x-ui() {
     rm x-ui-linux-${arch}.tar.gz -f
     cd x-ui
     chmod +x x-ui bin/xray-linux-${arch}
-    cp -f x-ui.service /etc/init.d/x-ui
     wget --no-check-certificate -O /usr/bin/x-ui https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/x-ui.sh
     chmod +x /usr/local/x-ui/x-ui.sh
     chmod +x /usr/bin/x-ui
