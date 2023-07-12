@@ -293,7 +293,7 @@ update_shell() {
 
 # 0: running, 1: not running, 2: not installed
 check_status() {
-    if [[ ! -f /etc/systemd/system/x-ui.service ]]; then
+    if [[ ! -f /etc/init.d/x-ui ]]; then
         return 2
     fi
     temp=$( rc-service x-ui status  | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
