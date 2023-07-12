@@ -298,9 +298,9 @@ check_status() {
     fi
     temp=$( rc-service x-ui status  | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
     if [[ x"${temp}" == x"status: started" ]]; then
-        return 1
+        return 0
     else
-        return 1
+        return 0
     fi
 }
 
