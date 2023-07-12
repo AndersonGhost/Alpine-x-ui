@@ -7,6 +7,24 @@ plain='\033[0m'
 
 cur_dir=$(pwd)
 
+arch=$(arch)
+
+if [[ $arch == "x86_64" || $arch == "x64" || $arch == "amd64" ]]; then
+    arch="amd64"
+elif [[ $arch == "aarch64" || $arch == "arm64" ]]; then
+    arch="arm64"
+else
+    arch="amd64"
+    echo -e "${red}检测架构失败，使用默认架构: ${arch}${plain}"
+fi
+
+echo "架构: ${arch}"
+
+if [ $(getconf WORD_BIT) != '32' ] && [ $(getconf LONG_BIT) != '64' ]; then
+    echo "本软件不支持 32 位系统(x86)，请使用 64 位系统(x86_64)，如果检测有误，请联系作者"
+    exit -1
+fi
+
 #This function will be called when user installed x-ui out of sercurity
 config_after_install() {
     echo -e "${yellow}出于安全考虑，安装/更新完成后需要强制修改端口与账户密码${plain}"
