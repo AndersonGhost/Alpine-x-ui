@@ -53,13 +53,6 @@ if [[ x"${release}" == x"alpine" ]]; then
     fi
 fi
 
-install_base() {
-    if [[ x"${release}" == x"alpine" ]]; then
-        apk add curl && apk add bash && apk add sudo && apk add wget
-    else
-        apt install wget curl tar -y
-    fi
-}
 
 #This function will be called when user installed x-ui out of sercurity
 config_after_install() {
