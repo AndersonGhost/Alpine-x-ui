@@ -74,7 +74,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/x-ui/master/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/master/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -93,7 +93,7 @@ update() {
         fi
         return 0
     fi
-    bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/x-ui/master/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/master/install.sh)
     if [[ $? == 0 ]]; then
         LOGI "更新完成，已自动重启面板 "
         exit 0
@@ -296,7 +296,7 @@ check_status() {
     if [[ ! -f /etc/init.d/x-ui ]]; then
         return 2
     fi
-    temp=$( rc-service x-ui status  | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+    temp=$(rc-service x-ui status)
     if [[ x"${temp}" == x"* status: started" ]]; then
         return 0
     else
