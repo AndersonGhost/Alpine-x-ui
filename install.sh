@@ -126,7 +126,7 @@ install_x-ui() {
     #echo -e "如果是更新面板，则按你之前的方式访问面板"
     #echo -e ""
     rc-update add /etc/init.d/x-ui
-    rc-service x-ui start
+    /etc/init.d/x-ui restart
     echo -e "${green}x-ui v${last_version}${plain} 安装完成，面板已启动，"
     echo -e ""
     echo -e "x-ui 管理脚本使用方法: "
