@@ -119,10 +119,8 @@ install_x-ui() {
     chmod +x /usr/bin/x-ui
     curl -Ls https://github.com/Lynn-Becky/Alpine-x-ui/raw/main/x-ui -o x-ui
     mv x-ui /etc/init.d/
-    chown 501.dialout /etc/x-ui/x-ui.db
     chown 501.dialout /usr/local/x-ui/bin/config.json
     chmod +x /etc/init.d/x-ui
-    chmod 0644 /etc/x-ui/x-ui.db
     chmod 0644 /usr/local/x-ui/bin/config.json
     config_after_install
     #echo -e "如果是全新安装，默认网页端口为 ${green}54321${plain}，用户名和密码默认都是 ${green}admin${plain}"
