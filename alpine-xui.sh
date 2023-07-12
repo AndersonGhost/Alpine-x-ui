@@ -1,11 +1,5 @@
 #!/bin/sh
 #
-
-red='\033[31m\033[01m'
-green='\033[32m\033[01m'
-yellow='\033[33m\033[01m'
-plain='\033[0m'
-
 # check root
 [[ $EUID -ne 0 ]] && echo -e "${red}错误：${plain} 必须使用root用户运行此脚本！\n" && exit 1
 
