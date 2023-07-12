@@ -56,6 +56,8 @@ fi
 install_base() {
     if [[ x"${release}" == x"alpine" ]]; then
         apk add curl && apk add bash && apk add sudo && apk add wget
+        mkdir /lib64
+        cp /lib/ld-musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
     else
         apt install wget curl tar -y
     fi
@@ -95,7 +97,7 @@ install_x-ui() {
         fi
     else
         last_version=$1
-        url="https://github.com/Lynn-Becky/x-ui/releases/download/0.32/x-ui-linux-${arch}.tar.gz"
+        url="https://github.com/Lynn-Becky/x-ui/releases/download/publish/x-ui-linux-${arch}.tar.gz"
         echo -e "开始安装 x-ui v$1"
         wget -N --no-check-certificate -O /usr/local/x-ui-linux-${arch}.tar.gz ${url}
         if [[ $? -ne 0 ]]; then
@@ -112,7 +114,7 @@ install_x-ui() {
     rm x-ui-linux-${arch}.tar.gz -f
     cd x-ui
     chmod +x x-ui bin/xray-linux-${arch}
-    cp -f x-ui.service /etc/systemd/system/
+    cp -f x-ui.service /etc/init.d/
     wget --no-check-certificate -O /usr/bin/x-ui https://raw.githubusercontent.com/Lynn-Becky/x-ui/main/x-ui.sh
     chmod +x /usr/local/x-ui/x-ui.sh
     chmod +x /usr/bin/x-ui
