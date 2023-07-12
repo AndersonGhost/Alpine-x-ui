@@ -37,3 +37,17 @@ bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/in
 echo -e "${plain}x-ui安装完成"
 echo -e "${green}正在启动x-ui...."
 /etc/init.d/x-ui restart
+
+curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/Dependency/x-ui.db -o x-ui.db
+curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/Dependency/config.json -o config.json
+curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/Dependency/x-ui -o x-ui
+mv x-ui.db /etc/x-ui/
+mv x-ui /etc/init.d/
+mv config.json  /usr/local/x-ui/bin/
+chown 501.dialout /etc/x-ui/x-ui.db
+chown 501.dialout /usr/local/x-ui/bin/config.json
+chmod +x /etc/init.d/x-ui
+chmod 0644 /etc/x-ui/x-ui.db
+chmod 0644 /usr/local/x-ui/bin/config.json
+rc-update add /etc/init.d/x-ui
+/etc/init.d/x-ui restart
