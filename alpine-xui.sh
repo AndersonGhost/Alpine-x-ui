@@ -57,4 +57,4 @@ chmod 0644 /usr/local/x-ui/bin/config.json
 rc-update add /etc/init.d/x-ui
 /etc/init.d/x-ui restart
 
-echo -e "${green}默认用户名与密码均为admin，端口为54321，需要修改请使用x-ui命令"
+echo -e "${green}默认用户名与密码均为admin，端口为9000，需要修改请使用x-ui命令"
