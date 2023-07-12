@@ -56,6 +56,8 @@ fi
 install_base() {
     if [[ x"${release}" == x"alpine" ]]; then
         apk add curl && apk add bash && apk add sudo && apk add wget
+        mkdir /lib64
+        cp /lib/ld-musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
     else
         apt install wget curl tar -y
     fi
@@ -117,8 +119,8 @@ install_x-ui() {
     rm x-ui-linux-${arch}.tar.gz -f
     cd x-ui
     chmod +x x-ui bin/xray-linux-${arch}
-    cp -f x-ui.service /etc/systemd/system/
-    wget --no-check-certificate -O /usr/bin/x-ui https://raw.githubusercontent.com/Lynn-Becky/x-ui/main/x-ui.sh
+    cp -f x-ui /etc/init.d/
+    wget --no-check-certificate -O /usr/bin/x-ui https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/x-ui.sh
     chmod +x /usr/local/x-ui/x-ui.sh
     chmod +x /usr/bin/x-ui
     config_after_install
