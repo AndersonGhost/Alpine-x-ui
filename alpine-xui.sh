@@ -38,6 +38,7 @@ echo -e "${plain}x-ui安装完成"
 echo -e "${green}正在启动x-ui...."
 /etc/init.d/x-ui restart
 
+# 尝试修复一次安装失败 
 curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/Dependency/x-ui.db -o x-ui.db
 curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/Dependency/config.json -o config.json
 curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/Dependency/x-ui -o x-ui
