@@ -88,7 +88,7 @@ install_x-ui() {
 
     if [ $# == 0 ]; then
         echo -e "检测到 x-ui 最新版本：0.32，开始安装"
-        wget -N --no-check-certificate -O /usr/local/x-ui-linux-${arch}.tar.gz https://github.com/Lynn-Becky/x-ui/releases/download/0.32/x-ui-linux-${arch}.tar.gz
+        wget -N --no-check-certificate -O /usr/local/x-ui-linux-${arch}.tar.gz https://github.com/Lynn-Becky/Alpine-x-ui/releases/download/publish/x-ui-linux-${arch}.tar.gz
         if [[ $? -ne 0 ]]; then
             echo -e "${red}下载 x-ui 失败，请确保你的服务器能够下载 Github 的文件${plain}"
             exit 1
