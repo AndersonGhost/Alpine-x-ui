@@ -1,11 +1,9 @@
 # x-ui
-
-支持多协议多用户的 xray 面板
-对Alpine linux做了尝试性适配
-![捕获2](https://github.com/Lynn-Becky/Alpine-x-ui/assets/60915579/b823282b-d88d-4588-a2b4-89148bee0856)
+适配Alpine linux
+x86-64版本使用了FranzKafkaYu编译的新x-ui，支持新协议，arm64版使用原版
 
 # 已知问题
-部分机器安装后无法打开x-ui或者ssh内管理x-ui提示 * status: crashed，请重新运行一次脚本，大概率可用解决问题
+小概率安装后无法打开x-ui或者ssh内管理x-ui提示 * status: crashed，请重新运行一次脚本。目前已对该问题做了尝试性修复
 # 功能介绍
 
 - 系统状态监控
