@@ -63,12 +63,10 @@ chmod 0644 /etc/x-ui/x-ui.db
 chmod 0644 /usr/local/x-ui/bin/config.json
 rc-update add /etc/init.d/x-ui
 /etc/init.d/x-ui start
-echo "安装x-ui时，修改用户名时建议直接回车"
+
 # install x-ui
 bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/x-ui/main/install.sh)
 
 echo -e "${plain}x-ui安装完成"
-#/usr/local/x-ui/x-ui setting -username admin -password admin -port 9000
-echo -e "${green}默认用户名admin,密码admin,端口9000(访问注意映射)"
 echo -e "${green}正在启动x-ui...."
 /etc/init.d/x-ui restart
