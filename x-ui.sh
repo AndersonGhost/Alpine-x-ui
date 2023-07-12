@@ -408,7 +408,7 @@ show_menu() {
     echo -e "
   ${green}x-ui 面板管理脚本${plain}
   ${green}0.${plain} 退出脚本
-————————————————未测试，不建议用
+————————————————未测试，不要用户
   ${green}1.${plain} 安装 x-ui
   ${green}2.${plain} 更新 x-ui
   ${green}3.${plain} 卸载 x-ui
@@ -423,7 +423,7 @@ show_menu() {
   ${green}10.${plain} 重启 x-ui
   ${green}11.${plain} 查看 x-ui 状态
   ${green}12.${plain} 查看 x-ui 日志
-————————————————不可用
+————————————————未测试，不要用
   ${green}13.${plain} 设置 x-ui 开机自启
   ${green}14.${plain} 取消 x-ui 开机自启
 ————————————————
