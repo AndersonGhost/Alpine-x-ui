@@ -28,3 +28,4 @@ apk add curl&&apk add bash && bash <(curl -Ls https://raw.githubusercontent.com/
 ```
 /etc/init.d/x-ui restart
 ```
+特别感谢mocikate大佬，安装脚本有部分参考其脚本并修改
