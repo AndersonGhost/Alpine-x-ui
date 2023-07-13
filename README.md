@@ -1,10 +1,9 @@
 # x-ui
-适配Alpine linux|
-x86-64版本使用了FranzKafkaYu编译的新x-ui，支持新协议，arm64版使用原版|
-
+适配Alpine linux  使用了F大编译的x-ui，支持reality  
+纯净系统首次安装后内存占用约为27m左右，重启后内存占用约为20m
 # 已知问题
-小概率安装后无法打开x-ui或者ssh内管理x-ui提示 * status: crashed，请重新运行一次脚本。目前已对该问题做了尝试性修复|
-注意：重复使用脚本会导致小鸡内存占用上升，纯净系统首次安装完毕后内存占用约在25m
+- 小概率安装后无法打开x-ui或者ssh内管理x-ui提示 * status: crashed，请重新运行一次脚本。目前已对该问题做了尝试性修复
+- 目前仅测试x86架构下的安装
 # 功能介绍
 
 - 系统状态监控
@@ -22,7 +21,8 @@ x86-64版本使用了FranzKafkaYu编译的新x-ui，支持新协议，arm64版�
 ```
 apk add curl&&apk add bash && bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/alpine-xui.sh)
 ```
-仅支持Alpine linux 安装
+仅支持Alpine linux 安装  
+支持x86与arm64架构的小鸡安装
 # 部分问题解决方案
 若跑太猛，面板crashed了，请使用以下命令重启面板
 ```
