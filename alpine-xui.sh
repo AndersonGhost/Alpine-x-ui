@@ -3,6 +3,10 @@ red='\033[0;31m'
 green='\033[0;32m'
 yellow='\033[0;33m'
 plain='\033[0m'
+echo -e "${green}Alpine安装x-ui一键脚本by mocikate "
+echo -e "${green}项目地址：https://github.com/Lynn-Becky/Alpine-x-ui"
+read -p "回车键继续..."
+echo -e "${green}x-ui install for alpine"
 
 # check root
 [[ $EUID -ne 0 ]] && echo -e "${red}错误：${plain} 必须使用root用户运行此脚本！\n" && exit 1
