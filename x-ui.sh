@@ -418,12 +418,11 @@ show_menu() {
   ${green}9.${plain} 停止 x-ui
   ${green}10.${plain} 重启 x-ui
   ${green}11.${plain} 查看 x-ui 状态
-  ${green}12.${plain} 查看 x-ui 日志
 ————————————————
 
  "
     show_status
-    echo && read -p "请输入选择 [0-14]: " num
+    echo && read -p "请输入选择 [0-11]: " num
 
     case "${num}" in
     0)
@@ -472,7 +471,7 @@ show_menu() {
         check_install && disable
         ;;
     *)
-        LOGE "请输入正确的数字 [0-12]"
+        LOGE "请输入正确的数字 [0-11]"
         ;;
     esac
 }
