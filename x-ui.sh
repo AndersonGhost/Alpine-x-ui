@@ -409,6 +409,8 @@ show_menu() {
   ${green}x-ui 面板管理脚本${plain}
   ${green}0.${plain} 退出脚本
 ————————————————
+  ${green}2.${plain} 更新 x-ui
+————————————————
   ${green}4.${plain} 重置用户名密码
   ${green}5.${plain} 重置面板设置
   ${green}6.${plain} 设置面板端口
