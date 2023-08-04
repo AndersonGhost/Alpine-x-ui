@@ -3,7 +3,7 @@ red='\033[0;31m'
 green='\033[0;32m'
 yellow='\033[0;33m'
 plain='\033[0m'
-echo -e "${green}Alpine-x-ui 安装脚本v test "
+echo -e "${green}Alpine-x-ui 安装脚本v0.3 "
 echo -e "${green}项目地址：https://github.com/Lynn-Becky/Alpine-x-ui"
 read -p "回车键继续..."
 echo -e "x-ui install for alpine"
