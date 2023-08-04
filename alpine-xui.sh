@@ -3,7 +3,7 @@ red='\033[0;31m'
 green='\033[0;32m'
 yellow='\033[0;33m'
 plain='\033[0m'
-echo -e "${green}Alpine-x-ui 安装脚本v0.2 "
+echo -e "${green}Alpine-x-ui 安装脚本v test "
 echo -e "${green}项目地址：https://github.com/Lynn-Becky/Alpine-x-ui"
 read -p "回车键继续..."
 echo -e "x-ui install for alpine"
@@ -20,14 +20,9 @@ fi
 
 
 echo "检查安装环境"
-apk add curl && apk add bash && apk add wget
+apk add curl && apk add wget
 mkdir /lib64
 cp /lib/ld-musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
-
-echo "安装Alpine所需文件"
-curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/test/Dependency/x-ui -o x-ui
-mv x-ui /etc/init.d/
-chmod +x /etc/init.d/x-ui
 
 # install x-ui
 bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/test/install.sh)
