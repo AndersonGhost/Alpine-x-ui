@@ -25,7 +25,7 @@ mkdir /lib64
 cp /lib/ld-musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
 
 # install x-ui
-bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/test/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/install.sh)
 
 # repair datebase
 curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/Dependency/x-ui.db -o x-ui.db
