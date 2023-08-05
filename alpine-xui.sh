@@ -20,7 +20,7 @@ fi
 
 
 echo "检查安装环境"
-apk add curl && apk add wget
+apk add bash && apk add curl && apk add wget
 mkdir /lib64
 cp /lib/ld-musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
 
