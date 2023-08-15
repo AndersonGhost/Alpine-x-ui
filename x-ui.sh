@@ -408,6 +408,7 @@ ssl_cert_issue_standalone() {
     fi
     #install socat second
         apk add socat
+        apk add openssl
     LOGI "socat安装成功..."
     #creat a directory for install cert
     certPath=/root/cert
