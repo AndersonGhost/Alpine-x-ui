@@ -1,6 +1,7 @@
 # x-ui
-适配Alpine linux  使用了F大编译的x-ui，支持reality  
-ovz，lxc虚拟化的小鸡，在纯净系统首次安装后内存占用约为27m左右，重启后内存占用约为20m
+适配Alpine linux  使用F大编译的x-ui，支持reality协议  
+默认端口9000，可使用x-ui命令更换
+ovz，lxc虚拟化的vps，在纯净系统首次安装后内存占用约为27m左右，重启后内存占用约为20m
 
 # 功能介绍
 
