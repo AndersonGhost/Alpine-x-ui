@@ -36,4 +36,6 @@ echo -e "${plain}x-ui安装完成"
 echo -e "${green}正在启动x-ui...."
 /etc/init.d/x-ui restart
 
-echo -e "${green}默认用户名与密码均为admin，端口为9000，需要修改请使用x-ui命令"
+echo -e "${green}默认用户名与密码均为admin，端口为9000。请立即修改，需要修改请使用x-ui命令或web界面！${plain}\n"
+
+
